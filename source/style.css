@@ -1,0 +1,62 @@
+*{
+    margin:0 ;
+    padding : 0;
+}
+
+body{
+     background-image:  url(/media/bg.jpeg);  /*-dummy bg image*/
+     background-size: cover;
+     
+     overflow: hidden;
+     height: 100vh;
+     /*setting it to 100vh so that the background video doesn't adds a overflow to the body */
+     
+}
+
+.taskbar{
+    background-color: #f3f3f3;
+
+    width: 100%;
+    position: absolute ;
+    bottom: 0;
+    display:flex;
+    /*adds transition in all cases where it can move eg -top ,left , bottom ,right */
+
+    justify-content: center;
+    
+
+
+}
+
+
+
+.right{
+ /* justify-self: flex-end; */ /* won't work because the flex container takes all items as an entity */
+   position: absolute ; /*relative to the body */
+   right:0;
+   margin: 6px 0; /* to better algin the  right task bar icon with others icons*/
+   height: 85%; /* extra margin lead to overflow of content that's why height was reduced */
+
+}
+.start-menu{
+    position: absolute;
+    /* bottom: 50px; */
+    bottom: -418px;
+    width: 100%;
+    transition: all 0.5s ease-in;
+    text-align: center;
+}
+.start-menu img{
+    max-width: 400px;
+    border-radius: 10px;
+}
+/* 
+ .bg-video{
+ position: absolute;
+ top: 0;
+ bottom: 0;
+     max-height: 100vh;
+     max-width: 100vh; 
+   object-fit:unset;
+ 
+}  */
